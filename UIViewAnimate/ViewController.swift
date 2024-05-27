@@ -16,13 +16,13 @@ class ViewController: UIViewController {
     }
     
     func animate(whichWay: Bool) {
-        UIView.animate(withDuration: 5.0) {
+        UIView.animate(withDuration: 2.0, delay: 0.5, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.2, options: [.repeat, .autoreverse], animations : {
         if whichWay {
             self.myImageView.center.y -= 250
         } else {
             self.myImageView.center.y += 250
         }
-    }
+    })
 }
     
     @IBAction func startButton(_ sender: UIButton) {
